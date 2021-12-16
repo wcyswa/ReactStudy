@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import AntdFrom from './pages/antdForm/index'
+import WcyAntdForm from "./pages/wcyAntdForm/wcyAntdForm";
+import {Tabs} from "antd";
+const { TabPane } = Tabs;
 
 function App() {
+    const callback = (key) => {
+        console.log(key);
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tabs defaultActiveKey="2" onChange={callback}>
+          <TabPane tab="原生form表单" key="1">
+              <AntdFrom/>
+          </TabPane>
+          <TabPane tab="自定义form表单" key="2">
+              <WcyAntdForm/>
+          </TabPane>
+      </Tabs>
     </div>
   );
 }
