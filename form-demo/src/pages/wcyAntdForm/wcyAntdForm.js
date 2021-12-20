@@ -3,6 +3,8 @@
  * antd4的表单是基于rc-field-form实现的
  */
 
+import {useEffect} from 'react'
+
 // 使用antd组件库系列
 // import FormItem from "./formItem";
 // import Form,{Field} from 'rc-field-form';
@@ -14,6 +16,10 @@ import Form,{Field} from '../../components/wcy-rc-field-form';
 import {Button} from "antd";
 const WcyAntdForm = () =>{
     const [form] = Form.useForm();
+
+    useEffect(()=>{
+        form.setFieldValue({'username':'请填写'})
+    })
 
     const onFinish = (values) => {
         console.log('Success:', values);
