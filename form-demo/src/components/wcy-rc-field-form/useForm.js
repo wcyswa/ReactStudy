@@ -4,12 +4,14 @@
 import { useRef } from 'react'
 class FormStore{
     constructor() {
+        // 数据仓库，用来set get数据
         this.store = {}
+        // 用来存储实例
         this.fieldEntries = [];
         this.callbacks = {}
     }
 
-    registerCallbacks = (callbacks) =>{
+    setCallbacks = (callbacks) =>{
         this.callbacks = {
             ...this.callbacks,
             ...callbacks
@@ -58,36 +60,49 @@ class FormStore{
         })
 
         // version3 解决v2中组件卸载需要取消订阅
-
+        // 通过暴露出订阅与取消订阅来保证 registerFieldEntries
 
     }
 
     validate = () =>{
-        const errs = [];
+        let errs = [];
+        const list = this.getFieldsValue();
+        Object.keys(list).forEach(key=>{
+            console.log(key, list[key], '数据')
+            if(list[key].length <= 0){
+                errs.push(`请填写${key}`)
+            }
+        })
         return errs;
     }
 
     onSubmit =()=>{
         const errs = this.validate();
+        console.log('onSubmist', errs)
         if(errs.length<=0){ // 校验通过
             // onFinish
+            this.callbacks.onFinish(this.getFieldsValue());
         }else{
             // onFinishFailed
+            this.callbacks.onFinishFailed(errs, this.getFieldsValue());
         }
     }
 
     getForm = () =>{
         return {
+            setCallbacks: this.setCallbacks,
             registerFieldEntries: this.registerFieldEntries,
             getFieldsValue: this.getFieldsValue,
             getFieldValue: this.getFieldValue,
             setFieldValue: this.setFieldValue,
+            onSubmit: this.onSubmit,
         }
     }
 }
 
 export default function useForm(form){
     // formStore 用来存储，因此需要将store本身先存储起来，否则每次都是创建,即将store存储到dom中
+    // 目的： 保证组件在卸载前的每个生命周期都访问的是同一个store
     const storeRef = useRef();
     /*
     如果dom没有值，则创建store

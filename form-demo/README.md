@@ -16,6 +16,8 @@ antd3 将form表单项的状态存储到form, 通过hoc去添加状态；缺点�
 如果整个form表单比较大，就会比较费劲
 antd4 将状态存在store(仓库)中，当get/set的时候，通知组件去更新(setState\forceUpdate)。具体通知到Form.item
 
+这两者更新较大的地方就是useForm
+
 5.antd4是基于re-field-form来进一步做的封装
 
 6.封装form表单的过程
