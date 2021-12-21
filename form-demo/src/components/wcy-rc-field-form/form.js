@@ -16,11 +16,12 @@ const Form = ({form, onFinish, onFinishFailed, children}, ref) =>{
     * context三步走
     * */
 
-
+    // ! 对于使用数据仓库的类组件，初次实例化仓库是发生在这里，因为在父组件中拿不到useForm，此时的form也没有值； 而函数组件是发生在Form的父组件
     const [formInstance] = useForm(form);
     formInstance.setCallbacks({onFinish, onFinishFailed})
 
     // 将子组件的实例反弹给父组件
+    // 使用ref的时候，自定义暴露给父组件的实例值
     useImperativeHandle(ref, ()=>formInstance)
     return (
         <form onSubmit={(e)=>{
