@@ -4,6 +4,7 @@
  */
 
 import React, {useEffect, Component} from 'react'
+import '../../utils/reducerDemo'
 
 // 使用antd组件库系列
 // import FormItem from "./formItem";

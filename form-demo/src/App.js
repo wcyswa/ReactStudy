@@ -1,6 +1,7 @@
 import './App.css';
 import AntdFrom from './pages/antdForm/index'
 import WcyAntdForm from "./pages/wcyAntdForm/wcyAntdForm";
+import ReduxDemo from './pages/reduxDemo/index'
 import {Tabs} from "antd";
 const { TabPane } = Tabs;
 
@@ -10,6 +11,7 @@ function App() {
     }
   return (
     <div className="App">
+        <ReduxDemo/>
       <Tabs defaultActiveKey="2" onChange={callback}>
           <TabPane tab="原生form表单" key="1">
               <AntdFrom/>

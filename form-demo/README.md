@@ -24,4 +24,20 @@ antd4 将状态存在store(仓库)中，当get/set的时候，通知组件去更
     1.需要form组件、field组件、useForm函数组件、input组件[搭架子] 
     2.构建状态仓库 FormStore
     3.将非受控组件处理为受控组件[React.cloneElement的时候，没有调用方法，导致没给children绑定属性，因此onChange没有效果]
-    4.实例化store，并将其保存起来[1.通过ref存储 2.form有可能不会去实例化，但是field是需要用到的]
+    4.实例化store，并将其保存起来[1.通过ref存储 2.form有可能不会去实例化，但是field是需要用到的],因此要在Form被父组件调用或者
+    Form组件内部去做初始化。
+    5.区分调用Form组件的是类组件还是函数组件。
+
+
+7.redux
+状态管理库,可以用于react,vue；仅仅是用来做数据管理方案
+
+8.redux实现过程
+ 1.const store = createStore(reducer) // reducer表示对state修改的规则
+ 2.store会返回state,页面中以store.getState()获取定义的state
+ 3.修改state,store.dispatch 传入对应的指令和参数
+ 4.修改完以后，要在页面更新，就使用store.subscribe(()=>{ ...this.forceUpdate()}) 订阅数据变化，去完成页面更新
+ 5.页面更新后记得去卸载订阅
+
+
+9.异步action，如延时的网络请求，就需要使用中间件来解决,redux-thunk
