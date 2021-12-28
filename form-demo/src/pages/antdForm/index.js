@@ -5,7 +5,6 @@
 import { Form, Input, Button, Checkbox } from 'antd';
 const AntdFrom  = () =>{
     const [form] = Form.useForm();
-    console.log(form, '测试')
     const onFinish = (values) => {
         console.log('Success:', values);
     };

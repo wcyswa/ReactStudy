@@ -14,7 +14,6 @@ export default class CustomInput extends React.Component{
 
     render() {
         const {value='', ...otherProps} = this.props;
-        console.log(value, otherProps, 'input属性')
         return <div style={{padding:10}}>
             <Input value={value}  {...otherProps}/>
         </div>

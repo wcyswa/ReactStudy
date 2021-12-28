@@ -22,15 +22,15 @@ export default class ReduxDemo extends React.Component{
     addAsync = () =>{
 
         /* 处理异步 */
-        // setTimeout(()=>{
-        //     store.dispatch({type: 'ADD'})
-        // })
-
-        store.dispatch((dispatch)=>{
-            setTimeout(()=>{
-                dispatch({type:'ADD'})
-            }, 1000)
+        setTimeout(()=>{
+            store.dispatch({type: 'ADD'})
         })
+
+        // store.dispatch((dispatch) => {
+        //     setTimeout(() => {
+        //         dispatch({type:'ADD'})
+        //     }, 1000)
+        // })
     }
 
     render() {

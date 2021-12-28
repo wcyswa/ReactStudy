@@ -1,12 +1,26 @@
 /**
  * create by wangchunyan1 on 2021/12/22
+ * 中间件是作为增强dispatch存在的
  */
+import {applyMiddleware} from "./index";
 
-export default function createStore(reducer){
+export default function createStore(reducer, enhancer){
+    console.log(reducer, enhancer, '发了')
+
+    if(enhancer){
+        /*
+        * enhancer作为中间件，主要是对dispatch进行增强， 函数本身也会返回一个对象{dispatch, getState, subscribe}
+        * 内部主要是进行dispatch的增强
+        *
+        * middleware传参的时候是逗号分隔，调用的时候遵循函数式编程，需要链式调用
+        * */
+        return enhancer(createStore)(reducer);
+    }
 
     let currentState;
     let currentListeners = [];
     const dispatch = (action) =>{
+        console.log(action, 'dispatch函数本身')
         currentState = reducer(currentState, action);
         // 执行订阅函数
         currentListeners.forEach(listener =>  listener())

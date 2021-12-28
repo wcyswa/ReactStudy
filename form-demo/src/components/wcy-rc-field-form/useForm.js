@@ -43,7 +43,7 @@ class FormStore{
             ...this.store,
             ...newStore
         }
-        console.log(this.store, '设置')
+        // console.log(this.store, '设置')
         // 订阅组件更新
         // 数据更新的时候去更新组件
 
@@ -68,7 +68,6 @@ class FormStore{
         let errs = [];
         const list = this.getFieldsValue();
         Object.keys(list).forEach(key=>{
-            console.log(key, list[key], '数据')
             if(list[key].length <= 0){
                 errs.push(`请填写${key}`)
             }
@@ -78,7 +77,6 @@ class FormStore{
 
     onSubmit =()=>{
         const errs = this.validate();
-        console.log('onSubmist', errs)
         if(errs.length<=0){ // 校验通过
             // onFinish
             this.callbacks.onFinish(this.getFieldsValue());

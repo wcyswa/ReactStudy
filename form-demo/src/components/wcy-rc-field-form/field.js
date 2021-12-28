@@ -37,7 +37,6 @@ export default class Field extends React.Component{
     }
 
     render(){
-        console.log('remder')
         const {children} = this.props;
         // 将组件变为受控组件
         const returnChildNode = React.cloneElement(children, this.getControlled())
