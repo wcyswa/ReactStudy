@@ -25,7 +25,6 @@ export default function applyMiddleware(...middlewares){
         const chains = middlewares.map(middleware=>middleware(midApi))
         dispatch = compose(...chains)(store.dispatch); // 执行聚合函数，拿到增强版本的dispatch
 
-        console.log(chains, '增强版本的dispatch', store.dispatch)
         return {
             ...store,
             dispatch,
@@ -48,6 +47,6 @@ function compose(...fns){
     }
 
     return fns.reduce((acc, item)=>(...args)=>{
-        acc(item(...args))
+        return acc(item(...args))
     })
 }
