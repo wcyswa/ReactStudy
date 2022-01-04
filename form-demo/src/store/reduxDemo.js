@@ -2,25 +2,28 @@
  * create by wangchunyan1 on 2021/12/21
  */
 // redux
-import {applyMiddleware, createStore} from 'redux';
+import {applyMiddleware, createStore, combineReducers} from 'redux';
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 // wcyRedux
 // import {createStore, applyMiddleware} from '../wcy-redux/index';
 
-function countReducer(state = 0, action){
+export function countReducer(state = 0, action){
+    console.log(state, action, '执行reducer')
     switch (action.type){
         case 'ADD':
-            return state + 1;
+            return state + (action.payload || 1);
         case 'MINUS':
-            return state - 1;
+            return state - (action.payload || 1);
         default:
             return state;
     }
 }
 
-const store = createStore(countReducer, applyMiddleware(thunk, logger))
+//
+const reducers = combineReducers({count: countReducer})
+const store = createStore(reducers, applyMiddleware(thunk, logger))
 export default store;
 
 /*
