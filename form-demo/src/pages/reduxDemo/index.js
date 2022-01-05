@@ -35,9 +35,10 @@ export default class ReduxDemo extends React.Component{
     }
 
     render() {
+        const {count} = store.getState();
         return (
             <div>
-                {store.getState()}
+                {count}
                 <button onClick={this.add}>add</button>
                 <button onClick={this.addAsync}>addAsync</button>
             </div>
