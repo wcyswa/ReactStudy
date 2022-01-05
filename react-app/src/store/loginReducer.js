@@ -9,8 +9,9 @@ const userInit = {
     err: {msg: ''}
 }
 export default function loginReducer(state=userInit, {type, payload}){
+    console.log(type, payload, 'reducer')
     switch (type) {
-        case REQUEST:
+        case REQUEST: // 请求中
             return {...state, loading: true};
         case LOGIN_SUCCESS:
             return {...state, isLogin: true, loading: false, userInfo: {...payload}};

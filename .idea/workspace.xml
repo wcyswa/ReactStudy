@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="283c602a-def7-44cd-aa92-fa7b28732103" name="Default Changelist" comment="初始化form-demo">
+      <change afterPath="$PROJECT_DIR$/react-app/src/service/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/action/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/action/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/pages/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/pages/UserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/pages/UserPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-app/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-app/src/routes/privateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/routes/privateRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/store/loginReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/store/loginReducer.js" afterDir="false" />
     </list>
@@ -91,6 +91,7 @@
       <workItem from="1640742591803" duration="4086000" />
       <workItem from="1640848495460" duration="25098000" />
       <workItem from="1641354433776" duration="6571000" />
+      <workItem from="1641369735113" duration="6932000" />
     </task>
     <task id="LOCAL-00001" summary="初始化form-demo">
       <created>1639562236875</created>
