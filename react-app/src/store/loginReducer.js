@@ -1,13 +1,14 @@
 /**
  * create by wangchunyan1 on 2022/1/4
  */
+import {REQUEST, LOGIN_FAILURE, LOGIN_SUCCESS, LOGOUT_SUCCESS} from "../action/const";
 const userInit = {
     isLogin: false,
     userInfo: {id: null, name: '', score: 0},
     loading: false,
     err: {msg: ''}
 }
-export default function loginReducer(state, {type, payload}){
+export default function loginReducer(state=userInit, {type, payload}){
     switch (type) {
         case REQUEST:
             return {...state, loading: true};

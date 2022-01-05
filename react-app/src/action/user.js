@@ -57,20 +57,20 @@ import co from "co";
 //   };
 // }
 
-// export function login(userInfo) {
-//   return function(dispatch) {
-//     return co(function*() {
-//       dispatch({type: "REQUEST"});
-//       // 请求1： 用户登录
-//       let res1 = yield loginPromise(dispatch, userInfo);
-//       console.log("rrrr", res1); //sy-log
-//       // 请求2： 根据用户基本信息获取详细信息
-//       if (res1) {
-//         getMoreUserInfo(dispatch, res1);
-//       }
-//     });
-//   };
-// }
+/*export function login(userInfo) {
+  return function(dispatch) {
+    return co(function*() {
+      dispatch({type: "REQUEST"});
+      // 请求1： 用户登录
+      let res1 = yield loginPromise(dispatch, userInfo);
+      console.log("rrrr", res1); //sy-log
+      // 请求2： 根据用户基本信息获取详细信息
+      if (res1) {
+        getMoreUserInfo(dispatch, res1);
+      }
+    });
+  };
+}*/
 
 // 方法3：  redux-saga action
-export const login = (userInfo) => ({type: LOGIN_SAGA, payload: userInfo});
+// export const login = (userInfo) => ({type: LOGIN_SAGA, payload: userInfo});
