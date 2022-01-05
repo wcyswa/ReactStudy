@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="283c602a-def7-44cd-aa92-fa7b28732103" name="Default Changelist" comment="初始化form-demo" />
+    <list default="true" id="283c602a-def7-44cd-aa92-fa7b28732103" name="Default Changelist" comment="初始化form-demo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/action/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/action/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/pages/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/pages/UserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/pages/UserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/routes/privateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/routes/privateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/store/loginReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/store/loginReducer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +48,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react-app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -78,6 +90,7 @@
       <workItem from="1640659969728" duration="6169000" />
       <workItem from="1640742591803" duration="4086000" />
       <workItem from="1640848495460" duration="25098000" />
+      <workItem from="1641354433776" duration="6571000" />
     </task>
     <task id="LOCAL-00001" summary="初始化form-demo">
       <created>1639562236875</created>
