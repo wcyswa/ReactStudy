@@ -2,8 +2,6 @@
  * create by wangchunyan1 on 2021/12/22
  * 中间件是作为增强dispatch存在的
  */
-import {applyMiddleware} from "./index";
-
 export default function createStore(reducer, enhancer){
     console.log(reducer, enhancer, '发了')
 
