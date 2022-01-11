@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="283c602a-def7-44cd-aa92-fa7b28732103" name="Default Changelist" comment="初始化form-demo">
-      <change afterPath="$PROJECT_DIR$/react-router-demo/src/pages/HomePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-router-demo/src/pages/UserPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-router-demo/src/pages/_404Page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-router-demo/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/browserRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-router-demo/src/wcy-react-router-dom/routerContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-router-demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-router-demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-router-demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-router-demo/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-router-demo/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-router-demo/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +93,8 @@
       <workItem from="1640742591803" duration="4086000" />
       <workItem from="1640848495460" duration="25098000" />
       <workItem from="1641354433776" duration="6571000" />
-      <workItem from="1641369735113" duration="13588000" />
+      <workItem from="1641369735113" duration="20524000" />
+      <workItem from="1641871718911" duration="8361000" />
     </task>
     <task id="LOCAL-00001" summary="初始化form-demo">
       <created>1639562236875</created>
