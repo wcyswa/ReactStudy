@@ -1,3 +1,6 @@
+form-demo
+主要包含： antd3、4 form表单; react-redux实现; redux实现
+
 
 1.context注意事项：
 当provider传递的是对象的时候，应该放到state中，因为下面的传递方式，是每次组件发生变化的时候，都会创建一个新的对象，
