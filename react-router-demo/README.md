@@ -1,6 +1,6 @@
 1.react-router的基本使用
 
-2.BrowserRouter、MemoryRouter、HashRouter属于路由组件的父类，需要由这些组件包裹，才可以使用Route、Link、Switch组件
+2.BrowserRouter(需要后端配置)、MemoryRouter(内存)、HashRouter(不需要后端配置)属于路由组件的父类，需要由这些组件包裹，才可以使用Route、Link、Switch组件
 
 3.Route渲染组件的三种方式
 1.children:func(在没有switch组件的情况下，不管路由是否匹配children都会渲染;)
