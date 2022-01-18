@@ -31,9 +31,10 @@ const jsx = (
 );
 
 function App() {
-  console.log(jsx, 'jsx')
   return (
-      jsx
+      <div className='border'>
+          <h1>标签</h1>
+      </div>
   );
 }
 
