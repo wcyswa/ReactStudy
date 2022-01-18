@@ -104,6 +104,7 @@ function performUnitOfWork(wip){
     if(isStr(type)){
         updateHostComponent(wip);
     }else if(isFn(type)) {
+        console.log(type, 'fn')
         updateFunctionComponent(wip);
     }else{
         updateFragmentComponent(wip);

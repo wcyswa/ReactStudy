@@ -21,7 +21,8 @@ export function updateHostComponent(wip){
 }
 
 export function updateFunctionComponent(wip){
-
+    const children = wip.type(wip.props);
+    reconcileChildren(wip, children)
 }
 
 export function updateFragmentComponent(wip){
