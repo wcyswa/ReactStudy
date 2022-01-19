@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="283c602a-def7-44cd-aa92-fa7b28732103" name="Default Changelist" comment="初始化form-demo">
+      <change afterPath="$PROJECT_DIR$/wcy-react-source/src/wcy-react/react.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wcy-react-source/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wcy-react-source/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wcy-react-source/src/wcy-react/ReactFiberReconciler.js" beforeDir="false" afterPath="$PROJECT_DIR$/wcy-react-source/src/wcy-react/ReactFiberReconciler.js" afterDir="false" />
@@ -90,7 +91,7 @@
       <workItem from="1641354433776" duration="6571000" />
       <workItem from="1641369735113" duration="20524000" />
       <workItem from="1641871718911" duration="51048000" />
-      <workItem from="1642500417090" duration="278000" />
+      <workItem from="1642500417090" duration="2567000" />
     </task>
     <task id="LOCAL-00001" summary="初始化form-demo">
       <created>1639562236875</created>

@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+// import {Component} from 'react';
 // import ReactDOM from 'react-dom';
+import {Component} from './wcy-react/react'
 import ReactDOM from './wcy-react/react-dom'
 import './index.css';
 import App from './App';
 
+/*
+* react 实现类组件，还需要实现Component组件
+* */
 class Cat extends Component{
 
     render() {

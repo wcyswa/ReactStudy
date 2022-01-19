@@ -5,7 +5,12 @@
 
 
 import {isFn, isStr} from "./utils";
-import {updateFragmentComponent, updateFunctionComponent, updateHostComponent} from "./ReactFiberReconciler";
+import {
+    updateClassComponent,
+    updateFragmentComponent,
+    updateFunctionComponent,
+    updateHostComponent
+} from "./ReactFiberReconciler";
 
 /*
 * 目的：更新fiber节点
@@ -104,8 +109,7 @@ function performUnitOfWork(wip){
     if(isStr(type)){
         updateHostComponent(wip);
     }else if(isFn(type)) {
-        console.log(type, 'fn')
-        updateFunctionComponent(wip);
+        type.prototype.isClassComponent ? updateClassComponent(wip) :  updateFunctionComponent(wip);
     }else{
         updateFragmentComponent(wip);
     }
