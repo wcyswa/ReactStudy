@@ -1,6 +1,5 @@
 /**
  * create by wangchunyan1 on 2022/1/17
- * 调度采用window.requestIdealCallback实现
  * 更新fiber节点
  */
 
@@ -12,6 +11,7 @@ import {
     updateFunctionComponent,
     updateHostComponent
 } from "./ReactFiberReconciler";
+import {scheduleCallback, shouldYield} from "./scheduler";
 
 /*
 * 目的：更新fiber节点
@@ -21,23 +21,22 @@ import {
 * */
 let wipRoot = null; // work in progress root 正在工作中的节点
 let nextUnitOfWork = null; // 下一个要更新的任务
+
+// 发起任务调度
 export function scheduleUpdateOnFiber(fiber){
     wipRoot = fiber;
     wipRoot.sibling = null;
     nextUnitOfWork = wipRoot;
+
+    // 发起任务调度
+    scheduleCallback(workLoop);
 }
 
-/*
-* 浏览器空闲的时候更新:此方法浏览器空闲的时候自动调用
-* 调用回调函数的时候，会传递IdleDeadline参数，这个对象会有一些方法，比如timeRemaining()获取当前剩余时间
-* */
-requestIdleCallback(workLoop);
-
-function workLoop(IdleDeadline){
+function workLoop(){
     /*
     * 1.当前有任务执行，并且还有剩余时间，处理下一个任务
     * */
-    while(nextUnitOfWork && IdleDeadline.timeRemaining() > 0){
+    while(nextUnitOfWork && !shouldYield()){
         nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
     }
 
@@ -81,6 +80,7 @@ function commitRootWork(wip){
 
     // 提交子节点
     commitRootWork(wip.child)
+    console.log(parentNode, '根节点')
 }
 
 /*
